@@ -1,0 +1,16 @@
+{
+  "data": {"someKey": "someValue"},
+  "id": "e072fb68-e1e9-4ff3-a871-5679012285f60",
+  "source": "url/source",
+  "specversion": "1.0",
+  "type": "com.xylia.platform.events.ApplicationSubmittedEvent",
+  "datacontenttype": "application/json",
+  "dataschema": "url/dataschema",
+  "subject": "subject",
+  "time": "2007-12-03T10:15:30+01:00",
+  "locale": "en-en",
+  "lineOfBusiness": "consumer",
+  "applicationId": "2020309EC359241NOK",
+  "eventCorrelationId": "e072fb68-e1e9-4ff3-a871-5679012285f60",
+  "product": "gold"
+}

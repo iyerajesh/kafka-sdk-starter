@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: cloudevent-sdk-starter
+  main:
+    allow-bean-definition-overriding: true
+
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
+    secondary-bootstrap-servers: ${spring.embedded.kafka.brokers}
+
+    producer:
+      enable-idempotence-config: true
+      acks-config: all
+    consumer:
+      group-id: cloudevent-sdk-starter
+      auto-offset-reset: latest
+    properties:
+      request:
+        timeout:
+          ms: 10000
+      retries: 2
+      retry:
+        backoff:
+          ms: 500
+      security:
+        protocol: PLAINTEXT
+      ssl:
+        endpoint:
+          identification:
+            algorithm: https
+      sasl:
+        mechanism: PLAIN
+  config:
+    activate:
+      on-profile: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    defaults:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+

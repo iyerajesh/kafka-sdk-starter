@@ -1,0 +1,27 @@
+package com.xylia.platform.events.support;
+
+public enum DeadLetterFailureReasons {
+
+    ENCRYPTION_FAILURE("ENCRYPTION_FAILURE"),
+    DECRYPTION_FAILURE("DECRYPTION_FAILURE"),
+    SERIALIZATION_FAILURE("SERIALIZATION_FAILURE"),
+    DESERIALIZATION_FAILURE("DESERIALIZATION_FAILURE"),
+    SCHEMA_VALIDATION_FAILURE("SCHEMA_VALIDATION_FAILURE"),
+    INCORRECT_EVENT_TYPE_FAILURE("INCORRECT_EVENT_TYPE"),
+    INVOKE_CALLBACK_CLASS_FAILURE("INVOKE_CALLBACK_CLASS_FAILURE"),
+    CALLBACK_CLASS_LOOKUP_FAILURE("CALLBACK_CLASS_LOOKUP_FAILURE"),
+    PUBLISH_FAILURE("PUBLISH_FAIL"),
+    CONNECTION_FAIlURE("CONNECTON_FAILURE"),
+    INVALID_OR_MISSING_FIELD("INVALID_OR_MISSING_FIELD"),
+    INVALID_PCN("INVALID_PCN");
+
+    private final String failureReason;
+
+    DeadLetterFailureReasons(String failureReason) {
+        this.failureReason = failureReason;
+    }
+
+    public String getFailureReason() {
+        return this.failureReason;
+    }
+}

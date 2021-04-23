@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: cloudevent-sdk-starter
+    admin:
+      enabled: true
+      jmx-name: org.springframework.boot:type=Admin,name=CloudEventSDK
